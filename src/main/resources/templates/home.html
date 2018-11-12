@@ -2,14 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" href="/static/bootstrap.min.css" th:href="@{/bootstrap.min.css}" />
-    <link rel="stylesheet" href="/costume.css" />
     <title>Home Page</title>
     <meta charset="utf-8"/>
 </head>
 <body style="background-color: #d5d5d5">
 <div th:replace="fragments/header :: header">
 </div>
-<div class="my-container">
+<div class="container-fluid" style="margin-top: 50px">
     <div class="hero-unit m-5">
         <h1><span th:text="${appName}"></span></h1>
         <p>
