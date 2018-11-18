@@ -1,2 +1,2 @@
-# # TransactionApp - Lesson 13 - Spring Security
-https://github.com/javaonboard/TransactipnApp/tree/lesson13
+# # TransactionApp - Lesson 14 - Spring Rest Services
+https://github.com/javaonboard/TransactipnApp/tree/lesson14
