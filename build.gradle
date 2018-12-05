@@ -10,6 +10,8 @@ buildscript {
     }
 }
 
+
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -18,15 +20,17 @@ apply plugin: 'io.spring.dependency-management'
 group = 'edu.dcccd'
 version = '0.0.1'
 sourceCompatibility = 10
-java.runtime.version= 1.8
+
+jar {
+    baseName = 'trans-app'
+}
+
 
 repositories {
     mavenCentral()
 }
 
-jar {
-    baseName = 'trans'
-}
+
 
 dependencies {
     
