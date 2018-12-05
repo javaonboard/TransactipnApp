@@ -1,2 +1,2 @@
-# # TransactionApp - Lesson 14 - Spring Rest Services
-https://github.com/javaonboard/TransactipnApp/tree/lesson14
+# TransactionApp - Lesson 15 - Deploy Spring App to Heroku
+https://github.com/javaonboard/TransactipnApp/tree/lesson15

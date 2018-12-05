@@ -1,6 +1,5 @@
 package edu.dcccd.trans.entity;
 
-
 import lombok.*;
 
 @Data

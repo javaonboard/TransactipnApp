@@ -2,37 +2,30 @@ package edu.dcccd.trans.controller;
 
 import edu.dcccd.trans.entity.Transaction;
 import edu.dcccd.trans.service.JokeService;
-import edu.dcccd.trans.service.TransactionService;
+import edu.dcccd.trans.service.TransactionServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @RestController
 public class RESTController {
-
     @Autowired
     private JokeService jokeService;
     @Autowired
-    private TransactionService transactionService;
+    private TransactionServiceImpl transactionService;
 
     @GetMapping(value = ("/joke"))
-    public String getJoke(){
+    public String getJoke(){	// consume a REST service
         return jokeService.getJoke("Craig", "Walls");
     }
 
-    @GetMapping(value = ("/download"))
-    public ResponseEntity<List<Transaction>> getTrans() {
-      List<Transaction> transactions = new ArrayList<>();
-      transactionService.getAllTransaction().forEach(transactions :: add);
-      if(!transactions.isEmpty())
-          return new ResponseEntity(transactions, HttpStatus.OK);
-      else
-          return new ResponseEntity(HttpStatus.NO_CONTENT);
-  }
+    /*@GetMapping("/transactions")
+    public List<Transaction> getAll(){
+        return StreamSupport.stream(transactionService.getAllTransaction().spliterator(),false)
+                .collect(Collectors.toList());
+    }*/
 }
