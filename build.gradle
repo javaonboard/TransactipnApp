@@ -10,6 +10,8 @@ buildscript {
     }
 }
 
+task stage(dependsOn: ['build', 'clean'])
+
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.12'
