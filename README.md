@@ -2,3 +2,5 @@
 https://github.com/javaonboard/TransactipnApp/tree/lesson15
 
 https://inew2438-spring-boot-app-ms.herokuapp.com/
+
+##heroku ps:scale web=1
